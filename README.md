@@ -19,16 +19,27 @@ The notebooks have been developed and tested under Amazon Linux 2. The following
 - Jupyter
 - bash_kernel kernel for Jupyter
 - jq
+- sysbench
 
 The following commands have been tested successfully to configure the host OS to be able to execute these notebooks:
 
+Enable EPEL repository:
 ~~~~
-sudo yum install python3 python3-devel gcc jq docker git
+cd /tmp
+wget -O epel.rpm –nv \
+https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install -y ./epel.rpm
+~~~~
+
+Install required packages:
+
+~~~~
+sudo yum install python3 python3-devel gcc jq docker git sysbench
 pip3 install --user jupyter
 pip3 install --user bash_kernel
 python3 -m bash_kernel.install
 sudo service docker start
-sudo usermod -a -G docker ec2-use
+sudo usermod -a -G docker ec2-user
 ~~~~
 
 Clone this repository to the instance
