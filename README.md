@@ -19,6 +19,8 @@ The notebooks have been developed and tested under Amazon Linux 2. The following
 - Jupyter
 - bash_kernel kernel for Jupyter
 - jq
+- netcat
+- nginx
 - sysbench
 
 The following commands have been tested successfully to configure the host OS to be able to execute these notebooks:
@@ -34,7 +36,7 @@ sudo yum install -y ./epel.rpm
 Install required packages:
 
 ~~~~
-sudo yum install python3 python3-devel gcc jq docker git sysbench
+sudo yum install python3 python3-devel gcc jq docker git sysbench nmap-ncat nginx
 pip3 install --user jupyter
 pip3 install --user bash_kernel
 python3 -m bash_kernel.install
