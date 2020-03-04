@@ -28,7 +28,7 @@ The following commands have been tested successfully to configure the host OS to
 Enable EPEL repository:
 ~~~~
 cd /tmp
-wget -O epel.rpm –nv \
+wget -O epel.rpm -nv \
 https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo yum install -y ./epel.rpm
 ~~~~
